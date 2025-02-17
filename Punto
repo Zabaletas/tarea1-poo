@@ -15,7 +15,6 @@ public class Punto {
     public String toString() {
         return "Punto(" + x + ", " + y + ")";
     }
-    // Método principal para pruebas
     public static void main(String[] args) {
         Punto p1 = new Punto(3, 4);
         System.out.println(p1); // Muestra: Punto(3.0, 4.0)
@@ -28,16 +27,12 @@ class Punto:
     def __init__(self, a: float, b: float):
         self.x = a
         self.y = b
-
     # Método para obtener coordenadas cartesianas
     def coord_cartesianas(self):
         return [self.x, self.y]
-
     # Método toString para representación en cadena
     def __str__(self):
         return f"Punto({self.x}, {self.y})"
-
-# Método principal para pruebas
 if __name__ == "__main__":
     p1 = Punto(3, 4)
     print(p1)  # Muestra: Punto(3, 4)
