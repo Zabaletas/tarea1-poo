@@ -1,0 +1,44 @@
+public class Punto {
+    // Atributos
+    public float x;
+    public float y;
+    // Constructor
+    public Punto(float a, float b) {
+        x = a;
+        y = b;
+    }
+    // Método para obtener coordenadas cartesianas
+    public float[] coord_cartesianas() {
+        return new float[]{x, y};
+    }
+    // Método toString para representación en cadena
+    public String toString() {
+        return "Punto(" + x + ", " + y + ")";
+    }
+    // Método principal para pruebas
+    public static void main(String[] args) {
+        Punto p1 = new Punto(3, 4);
+        System.out.println(p1); // Muestra: Punto(3.0, 4.0)
+        System.out.println("Cartesianas: [" + p1.coord_cartesianas()[0] + ", " + p1.coord_cartesianas()[1] + "]");
+    }
+}
+
+class Punto:
+    # Constructor
+    def __init__(self, a: float, b: float):
+        self.x = a
+        self.y = b
+
+    # Método para obtener coordenadas cartesianas
+    def coord_cartesianas(self):
+        return [self.x, self.y]
+
+    # Método toString para representación en cadena
+    def __str__(self):
+        return f"Punto({self.x}, {self.y})"
+
+# Método principal para pruebas
+if __name__ == "__main__":
+    p1 = Punto(3, 4)
+    print(p1)  # Muestra: Punto(3, 4)
+    print("Cartesianas:", p1.coord_cartesianas())  # [3, 4]
